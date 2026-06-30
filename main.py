@@ -12,21 +12,22 @@ from email.mime.text import MIMEText
 from email.header import Header
 
 # --- 全局配置 ---
-# 选择您要监控的领事馆: "SHANGHAI" / "WUHAN" / "SHENYANG"
-LOCATION_NAME = "SHANGHAI"
+# 选择您要监控的领事馆: "SHANGHAI" / "WUHAN" / "BEIJING"/ "GUANGZHOU"
+LOCATION_NAME = "WUHAN"
 
 LOCATIONS = {
-    "SHANGHAI": {"name": "SHANGHAI", "id": "096bf614-b0db-ec11-a7b4-001dd80234f6"},
-    "WUHAN": {"name": "WUHAN", "id": "7b6af614-b0db-ec11-a7b4-001dd80234f6"},
-    "SHENYANG": {"name": "SHENYANG", "id": "0f6bf614-b0db-ec11-a7b4-001dd80234f6"},
+    "SHANGHAI": {"Yichen He": "SHANGHAI", "id": "096bf614-b0db-ec11-a7b4-001dd80234f6"},
+    "WUHAN": {"Yichen He": "WUHAN", "id": "7b6af614-b0db-ec11-a7b4-001dd80234f6"},
+    "BEIJING": {"Yichen He": "BEIJING", "id": "0f6bf614-b0db-ec11-a7b4-001dd80234f6"},
+    "GUANGZHOU": {"Yichen He": "GUANGZHOU", "id": "0f6bf614-b0db-ec11-a7b4-001dd80234f6"},
 }
 LOCATION_VALUE_ID = LOCATIONS[LOCATION_NAME]["id"]
 
 # --- 自动预定配置 ---
 BOOKING_CONFIG = {
     "BOOKING_ENABLED": False,
-    "EARLIEST_DATE_STR": "2025-08-01",   # 可接受的最早预约日期
-    "LATEST_DATE_STR": "2025-08-31",     # 可接受的最晚预约日期
+    "EARLIEST_DATE_STR": "2026-07-01",   # 可接受的最早预约日期
+    "LATEST_DATE_STR": "2026-07-31",     # 可接受的最晚预约日期
     "DRY_RUN": True,                     # True=安全模式(不提交), False=真实预定
     "KEEP_BROWSER_OPEN_ON_EXIT": True    # 任务完成后是否保持浏览器打开
 }
