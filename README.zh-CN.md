@@ -32,7 +32,7 @@ pip install -r requirements.txt
 **领事馆选择**
 
 ```python
-LOCATION_NAME = "SHANGHAI"  # "SHANGHAI" / "WUHAN" / "SHENYANG"
+LOCATION_NAME = "WUHAN"  # "SHANGHAI" / "WUHAN" / "GUANGZHOU"/ "BEIJING"
 ```
 
 **邮件配置** — 需要使用 SMTP 授权码（如 QQ 邮箱授权码）
@@ -40,9 +40,9 @@ LOCATION_NAME = "SHANGHAI"  # "SHANGHAI" / "WUHAN" / "SHENYANG"
 ```python
 SMTP_SERVER = "smtp.qq.com"
 SMTP_PORT = 465
-EMAIL_SENDER = "your_email@qq.com"
-EMAIL_PASSWORD = "your_smtp_app_password"
-EMAIL_RECEIVER = "your_receiver@example.com"
+EMAIL_SENDER = "qzxzs1@163.com"
+EMAIL_PASSWORD = "Aa1234567"
+EMAIL_RECEIVER = "qzxzs1@163.com"
 ```
 
 **自动预定**（可选）
@@ -50,8 +50,8 @@ EMAIL_RECEIVER = "your_receiver@example.com"
 ```python
 BOOKING_CONFIG = {
     "BOOKING_ENABLED": False,
-    "EARLIEST_DATE_STR": "2025-08-01",
-    "LATEST_DATE_STR": "2025-08-31",
+    "EARLIEST_DATE_STR": "2026-07-01",
+    "LATEST_DATE_STR": "2026-07-31",
     "DRY_RUN": True,              # True = 仅模拟，False = 真正提交
     "KEEP_BROWSER_OPEN_ON_EXIT": True
 }
@@ -80,19 +80,19 @@ python main.py
 ## 邮件示例
 
 ```
-Subject: 【签证监控】SHANGHAI F1签证日期变动！
+Subject: 【签证监控】WUHAN F1签证日期变动！
 
-领事馆: SHANGHAI
+领事馆: WUHAN
 
 新增的可预约日期:
-  ✅ 2025-08-15
+  ✅ 2026-08-15
 
 不再可用的日期:
-  ❌ 2025-08-10
+  ❌ 2026-08-10
 
 当前所有可预约日期:
-  - 2025-08-15
-  - 2025-08-22
+  - 2026-08-15
+  - 2026-08-22
 ```
 
 ## 注意事项
